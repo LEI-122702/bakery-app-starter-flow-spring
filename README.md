@@ -1,4 +1,4 @@
-# Grupo : Trolhices
+# Grupo : Discípulos de Guizé
 
 ## Membros
 
