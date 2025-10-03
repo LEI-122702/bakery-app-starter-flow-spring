@@ -1,6 +1,29 @@
 import { html, css, LitElement } from 'lit';
 
+/**
+ * `buttons-bar` é um componente de barra de botões reutilizável.
+ *
+ * Este componente organiza botões e informações adicionais em
+ * diferentes slots (`left`, `info`, `right`).
+ *
+ * Funcionalidades:
+ * - Layout responsivo com flexbox.
+ * - Suporte a sombra opcional (removida com o atributo `no-scroll`).
+ * - Organização automática em ecrãs pequenos (mobile-friendly).
+ *
+ * Slots disponíveis:
+ * - `left`: Botões ou elementos alinhados à esquerda.
+ * - `info`: Informações ou textos alinhados ao centro/direita.
+ * - `right`: Botões ou elementos alinhados à direita.
+ */
 class ButtonsBarElement extends LitElement {
+
+  /**
+   * Define os estilos CSS do componente.
+   *
+   * Inclui layout flexível, espaçamento e responsividade
+   * (ajuste automático para ecrãs < 600px).
+   */
   static get styles() {
     return css`
       :host {
@@ -38,6 +61,12 @@ class ButtonsBarElement extends LitElement {
     `;
   }
 
+  /**
+   * Renderiza o HTML do componente, usando slots
+   * para permitir a inserção de conteúdo externo.
+   *
+   * @returns {import("lit").TemplateResult} Estrutura HTML do componente.
+   */
   render() {
     return html`
       <slot name="left"></slot>
@@ -46,9 +75,13 @@ class ButtonsBarElement extends LitElement {
     `;
   }
 
+  /**
+   * Nome da tag customizada usada no HTML.
+   * @returns {string}
+   */
   static get is() {
     return 'buttons-bar';
   }
 }
 
-customElements.define(ButtonsBarElement.is, ButtonsBarElement);
+// Regista o campo
