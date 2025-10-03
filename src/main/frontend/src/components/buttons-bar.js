@@ -84,4 +84,4 @@ class ButtonsBarElement extends LitElement {
   }
 }
 
-// Regista o compo
+// Regista
