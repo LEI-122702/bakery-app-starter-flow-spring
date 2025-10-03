@@ -29,6 +29,9 @@ import com.vaadin.starter.bakery.backend.data.Role;
 @Profile("performance-test")
 public class PerformanceTestSecurityConfiguration extends VaadinWebSecurity {
 
+    /**
+     * Configuração
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
