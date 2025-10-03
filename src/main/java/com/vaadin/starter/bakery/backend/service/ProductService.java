@@ -51,11 +51,20 @@ public class ProductService implements FilterableCrudService<Product> {
 	public JpaRepository<Product, Long> getRepository() {
 		return productRepository;
 	}
+/**
+ * Cria uma nova instância de {@link Product}.
+ * 
+ * Este método é chamado quando um utilizador autenticado deseja
+ * criar um novo produto no sistema. 
+ *
+ * @param currentUser Utilizador que está a criar o produto
+ * @return Um novo objeto {@code Product} inicializado mas ainda sem dados
+ */
+@Override
+public Product createNew(User currentUser) {
+    return new Product();
+}
 
-	@Override
-	public Product createNew(User currentUser) {
-		return new Product();
-	}
 
 	@Override
 	public Product save(User currentUser, Product entity) {
