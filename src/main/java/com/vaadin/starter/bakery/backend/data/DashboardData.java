@@ -63,7 +63,7 @@ public class DashboardData {
 	}
 
 	/**
-	 * Obtém a lista de entregas deste ano.
+	 * Obtém a lista de entregas deste ano
 	 *
 	 * @return lista de números representando entregas mensais.
 	 */

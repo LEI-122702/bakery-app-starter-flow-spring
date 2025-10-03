@@ -78,7 +78,7 @@ class DashboardCounterLabel extends LitElement {
 
   /**
    * Renderiza a estrutura HTML do componente,
-   * incluindo espaço para gráfico, contador, título e subtítulo.
+   * incluindo espaço para gráfico, contador, título e subtítulo
    *
    * @returns {TemplateResult} Template do Lit a ser renderizado.
    */
