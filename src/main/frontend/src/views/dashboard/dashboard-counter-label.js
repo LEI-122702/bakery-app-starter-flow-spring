@@ -1,6 +1,21 @@
 import { html, css, LitElement } from 'lit';
 
+/**
+ * Componente web <dashboard-counter-label> que apresenta
+ * um contador com título, subtítulo e um espaço para gráfico.
+ *
+ * É utilizado no dashboard da aplicação para exibir valores
+ * numéricos destacados (como estatísticas ou métricas) com
+ * cores e estilos configuráveis.
+ *
+ * Extende {@link LitElement} da biblioteca Lit.
+ */
 class DashboardCounterLabel extends LitElement {
+  /**
+   * Define os estilos CSS específicos para o componente.
+   *
+   * @returns {CSSResult} Conjunto de regras CSS aplicadas ao shadow DOM.
+   */
   static get styles() {
     return css`
       :host {
@@ -61,6 +76,12 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  /**
+   * Renderiza a estrutura HTML do componente,
+   * incluindo espaço para gráfico, contador, título e subtítulo.
+   *
+   * @returns {TemplateResult} Template do Lit a ser renderizado.
+   */
   render() {
     return html`
       <div class="chart-wrapper">
@@ -78,9 +99,18 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  /**
+   * Nome do custom element a ser registado no navegador.
+   *
+   * @returns {string} Nome da tag HTML personalizada.
+   */
   static get is() {
     return 'dashboard-counter-label';
   }
 }
 
+/**
+ * Registo do componente <dashboard-counter-label>
+ * no Custom Elements Registry do browser.
+ */
 customElements.define(DashboardCounterLabel.is, DashboardCounterLabel);
