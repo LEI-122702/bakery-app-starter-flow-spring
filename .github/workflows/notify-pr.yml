@@ -1,0 +1,12 @@
+name: Notificação de Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensagem de notificação
+        run: echo "Um Pull Request foi aberto/atualizado por ${{ github.actor }}"
